@@ -7,16 +7,16 @@ import TodoList from "./TodoList";
 const App = () => {
   const [todos, setTodos]= useState([
     {title:"Learn React",
-    completed:false}, 
+    mark:"notComplete"}, 
     {title:"Build a React App",
-    completed:false}, 
+    mark:"notComplete"}, 
     {title:"Deploy a React app",
-    completed:false
+    mark:"notComplete"
   }]);
 
   const handleComplete = (todo)=>{
     const filterData = todos.map((item)=>
-      item.title===todo.title? {...item,completed:true}:item)
+      item.title===todo.title? {...item,mark:"completed"}:item)
     setTodos(filterData);
   };
 
