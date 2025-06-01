@@ -17,7 +17,7 @@ const App = () => {
   const handleComplete = (todo)=>{
     const filterData = todos.map((item)=>
       item.title===todo.title? {...item,mark:"completed"}:item)
-    setTodos(filterData);
+    setTodos([...filterData]);
   };
 
   return (
